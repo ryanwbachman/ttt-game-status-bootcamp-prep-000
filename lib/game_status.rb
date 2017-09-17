@@ -25,3 +25,9 @@ def won?(board)
   end
   false
 end
+
+def full?(board)
+  board.all? do |position|
+    position == "X" || positon == "Y"
+  end
+end
