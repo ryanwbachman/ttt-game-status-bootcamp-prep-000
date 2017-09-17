@@ -10,3 +10,18 @@ WIN_COMBINATIONS =
   [0,3,6],[1,4,7],[2,5,8], # win by vertical column
   [0,4,8],[2,4,6]          # win by diagonal
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.each do |combo|
+    all_x = combo.all? do |index|
+      board[index] == "X"
+    end
+    all_o = combo.all? do |index|
+      board[index] == "O"
+    end
+    if all_x || all_o
+      return true
+    end
+  end
+  false
+end
