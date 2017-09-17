@@ -20,7 +20,7 @@ def won?(board)
       board[index] == "O"
     end
     if all_x || all_o
-      return true
+      return combo
     end
   end
   false
